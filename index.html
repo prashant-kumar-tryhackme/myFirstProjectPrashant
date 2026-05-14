@@ -1,25 +1,686 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Design</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan Seva Kendra भगवानपुर  | जन सेवा केंद्र</title>
+  <meta name="description" content="Jan Seva Kendra - Aadhar, PAN, Ration Card, Scholarship aur sabhi sarkari seva ek jagah | सभी सरकारी सेवाएं एक स्थान पर" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <link
+      rel="shortcut icon"
+      href="/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
 </head>
 <body>
-    <main class="main">
-        <img src="/images/image-equilibrium.jpg" alt="">
-        <h3>Equilibrium <span class="span">#3429</span></h3>
-        <p class="para-1">Our Equilibrium collection promotes balance and calm.</p>
-        <div class="days-left">
-            <span class="span-1">0.041 ETH</span>
-            <span class="span-2 ">3 days left</span>
+
+  <!-- ===== PRELOADER ===== -->
+  <!-- <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <i class="fas fa-landmark"></i>
+      </div>
+      <div class="preloader-bar"><span></span></div>
+      <p>Prashant Jan Seva Kendra Loading...</p>
+    </div>
+  </div> -->
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-landmark"></i></div>
+        <div class="logo-text">
+          <span class="logo-main">Prashant Jan Seva Kendra</span>
+          <span class="logo-sub">प्रशांत जन सेवा केंद्र</span>
         </div>
-        <div class="photos">
-            <img src="/images/image-avatar.png" alt="">
-            <p class="para-3">Creation of Jules Wyvern</p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search service... / सेवा खोजें..." autocomplete="off" />
+        <div id="searchDropdown" class="search-dropdown"></div>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#services" class="nav-link"><i class="fas fa-th-large"></i><span>Services</span></a>
+        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+        <a href="#certificate" class="nav-link"><i class="fas fa-certificate"></i><span>Certificate</span></a>
+        <a href="#owner" class="nav-link"><i class="fas fa-user-tie"></i><span>Owner</span></a>
+        <a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>Trusted Government Service Center | विश्वसनीय सरकारी सेवा केंद्र</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-hi">सभी सरकारी सेवाएं</span>
+        <span class="title-divider">—</span>
+        <span class="title-en">One Stop Solution</span>
+      </h1>
+      <p class="hero-subtitle">
+        Aadhar · PAN · Ration Card · Scholarship · Voter ID · Ayushman Card & More<br/>
+        <span class="hindi-text">आधार · पैन · राशन कार्ड · छात्रवृत्ति · मतदाता पहचान पत्र और बहुत कुछ</span><br>
+        <span class="hindi-text" id="sarkari-style">🇮🇳  सरकार मान्यता प्राप्त जन सेवा केंद्र csc</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#services" class="btn-primary">
+          <i class="fas fa-th-large"></i> View All Services / सेवाएं देखें
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <i class="fas fa-phone-alt"></i> Call Now / अभी कॉल करें
+        </a>
+      </div>
+      <!-- Stats Bar -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="5000">0</span><span>+</span>
+          <span class="stat-label">Customers Served<br/><small>ग्राहक सेवित</small></span>
         </div>
-    </main>
-    
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="30">0</span><span>+</span>
+          <span class="stat-label">Services Available<br/><small>सेवाएं उपलब्ध</small></span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="8">0</span><span>+</span>
+          <span class="stat-label">Years Experience<br/><small>वर्षों का अनुभव</small></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-col">
+      <div class="hero-card-mockup">
+        <div class="mockup-card card1"><i class="fas fa-id-card"></i><span>Aadhar Card</span></div>
+        <div class="mockup-card card2"><i class="fas fa-passport"></i><span>PAN Card</span></div>
+        <div class="mockup-card card3"><i class="fas fa-heartbeat"></i><span>PVC Card</span></div>
+        <div class="mockup-card card4"><i class="fas fa-vote-yea"></i><span>Voter ID</span></div>
+        <div class="mockup-center-icon"><i class="fas fa-landmark"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE TICKER ===== -->
+  <div class="ticker-wrapper">
+    <div class="ticker-label"><i class="fas fa-bullhorn"></i> Notice</div>
+    <div class="ticker-content">
+      <span>✅ Aadhar Update Now Available &nbsp;|&nbsp; ✅ PAN Card 2.0 Apply Here &nbsp;|&nbsp; ✅ UP Scholarship 2026-27 Form &nbsp;|&nbsp; ✅ Ayushman Card New Enrollment &nbsp;|&nbsp; ✅ e-Shram Card Registration Open &nbsp;|&nbsp; ✅ Ration Card New Member Add &nbsp;|&nbsp;</span>
+      <span>✅ Aadhar Update Now Available &nbsp;|&nbsp; ✅ PAN Card 2.0 Apply Here &nbsp;|&nbsp; ✅ UP Scholarship 2026-27 Form &nbsp;|&nbsp; ✅ Ayushman Card New Enrollment &nbsp;|&nbsp; ✅ e-Shram Card Registration Open &nbsp;|&nbsp; ✅ Ration Card New Member Add &nbsp;|&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="services-section">
+    <div class="section-header">
+      <div class="section-tag"><i class="fas fa-th-large"></i> Our Services</div>
+      <h2>हमारी सेवाएं <span>/ Our Services</span></h2>
+      <p>सभी सरकारी और डिजिटल सेवाएं एक ही स्थान पर उपलब्ध हैं<br/>All government & digital services available at one place</p>
+    </div>
+
+    <!-- Service Category: Government Documents -->
+    <div class="services-category">
+      <h3 class="cat-title"><i class="fas fa-file-alt"></i> Government Documents / सरकारी दस्तावेज़</h3>
+      <div class="services-grid" id="govtGrid">
+
+        <div class="service-card" data-name="Aadhar Card Download Update आधार कार्ड">
+          <div class="card-icon aadhar"><i class="fas fa-id-card"></i></div>
+          <h4>Aadhar Card</h4>
+          <p class="card-hindi">आधार कार्ड</p>
+          <p class="card-desc">Download, Update & Correction<br/>डाउनलोड, अपडेट और सुधार</p>
+          <button class="card-btn" onclick="openModal('aadhar')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Jati Praman Patra Caste Certificate जाति प्रमाण पत्र">
+          <div class="card-icon jati"><i class="fas fa-scroll"></i></div>
+          <h4>Jati Praman Patra</h4>
+          <p class="card-hindi">जाति प्रमाण पत्र</p>
+          <p class="card-desc">Caste Certificate Apply & Download<br/>जाति प्रमाण पत्र आवेदन</p>
+          <button class="card-btn" onclick="openModal('jati')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Niwas Praman Patra Domicile Certificate निवास प्रमाण पत्र">
+          <div class="card-icon niwas"><i class="fas fa-home"></i></div>
+          <h4>Niwas Praman Patra</h4>
+          <p class="card-hindi">निवास प्रमाण पत्र</p>
+          <p class="card-desc">Domicile Certificate Apply<br/>निवास प्रमाण पत्र बनवाएं</p>
+          <button class="card-btn" onclick="openModal('niwas')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Aay Praman Patra Income Certificate आय प्रमाण पत्र">
+          <div class="card-icon aay"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h4>Aay Praman Patra</h4>
+          <p class="card-hindi">आय प्रमाण पत्र</p>
+          <p class="card-desc">Income Certificate Apply<br/>आय प्रमाण पत्र बनवाएं</p>
+          <button class="card-btn" onclick="openModal('aay')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="PAN Card Apply Change पैन कार्ड">
+          <div class="card-icon pan"><i class="fas fa-credit-card"></i></div>
+          <h4>PAN Card</h4>
+          <p class="card-hindi">पैन कार्ड</p>
+          <p class="card-desc">Apply, Change & Correction<br/>पैन कार्ड बनवाएं / बदलाव</p>
+          <button class="card-btn" onclick="openModal('pan')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Ration Card राशन कार्ड">
+          <div class="card-icon ration"><i class="fas fa-shopping-basket"></i></div>
+          <h4>Ration Card</h4>
+          <p class="card-hindi">राशन कार्ड</p>
+          <p class="card-desc">New Apply, Update & Member Add<br/>राशन कार्ड बनवाएं / सुधार</p>
+          <button class="card-btn" onclick="openModal('ration')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Ayushman Card Bharat Health आयुष्मान कार्ड">
+          <div class="card-icon ayushman"><i class="fas fa-heartbeat"></i></div>
+          <h4>Ayushman Card</h4>
+          <p class="card-hindi">आयुष्मान कार्ड</p>
+          <p class="card-desc">PM Jan Arogya Yojana Card<br/>5 लाख तक स्वास्थ्य बीमा</p>
+          <button class="card-btn" onclick="openModal('ayushman')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="e-Shram Card Labour Registration ई-श्रम कार्ड">
+          <div class="card-icon eshram"><i class="fas fa-hard-hat"></i></div>
+          <h4>e-Shram Card</h4>
+          <p class="card-hindi">ई-श्रम कार्ड</p>
+          <p class="card-desc">Labour Registration Card<br/>असंगठित मजदूर पंजीकरण</p>
+          <button class="card-btn" onclick="openModal('eshram')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="PVC Card Aadhar PVC पीवीसी कार्ड">
+          <div class="card-icon pvc"><i class="fas fa-id-badge"></i></div>
+          <h4>PVC Card</h4>
+          <p class="card-hindi">पीवीसी कार्ड</p>
+          <p class="card-desc">Plastic Aadhar PVC Card Order<br/>प्लास्टिक आधार कार्ड बनवाएं</p>
+          <button class="card-btn" onclick="openModal('pvc')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Panjikaran Registration Birth Death पंजीकरण">
+          <div class="card-icon panjikaran"><i class="fas fa-registered"></i></div>
+          <h4>Panjikaran</h4>
+          <p class="card-hindi">पंजीकरण</p>
+          <p class="card-desc">Birth, Death & Marriage Registration<br/>जन्म, मृत्यु व विवाह पंजीकरण</p>
+          <button class="card-btn" onclick="openModal('panjikaran')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Voter Card Voter ID Pehchan Patra मतदाता पहचान पत्र">
+          <div class="card-icon voter"><i class="fas fa-vote-yea"></i></div>
+          <h4>Voter Card</h4>
+          <p class="card-hindi">मतदाता पहचान पत्र</p>
+          <p class="card-desc">New Apply, Correction & Download<br/>नया आवेदन / सुधार / डाउनलोड</p>
+          <button class="card-btn" onclick="openModal('voter')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Sarkari Form Government Form सरकारी फॉर्म">
+          <div class="card-icon sarkari"><i class="fas fa-clipboard-list"></i></div>
+          <h4>Sarkari Form</h4>
+          <p class="card-hindi">सरकारी फॉर्म</p>
+          <p class="card-desc">All Government Forms Available<br/>सभी सरकारी फॉर्म उपलब्ध</p>
+          <button class="card-btn" onclick="openModal('sarkari')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="UP Scholarship Scholarship Form उत्तर प्रदेश छात्रवृत्ति">
+          <div class="card-icon scholarship"><i class="fas fa-graduation-cap"></i></div>
+          <h4>UP Scholarship</h4>
+          <p class="card-hindi">उत्तर प्रदेश छात्रवृत्ति</p>
+          <p class="card-desc">Pre/Post Matric Form Apply<br/>छात्रवृत्ति फॉर्म आवेदन</p>
+          <button class="card-btn" onclick="openModal('scholarship')">Know More / जानें</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Service Category: Photo & Print -->
+    <div class="services-category">
+      <h3 class="cat-title"><i class="fas fa-camera"></i> Photo & Print / फोटो और प्रिंट</h3>
+      <div class="services-grid">
+
+        <div class="service-card" data-name="Photo Photography Passport Size फोटो">
+          <div class="card-icon photo"><i class="fas fa-camera"></i></div>
+          <h4>Photo</h4>
+          <p class="card-hindi">फोटो</p>
+          <p class="card-desc">Passport & Document Size Photos<br/>पासपोर्ट व दस्तावेज़ साइज़ फोटो</p>
+          <button class="card-btn" onclick="openModal('photo')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Photocopy Xerox Print फोटोकॉपी">
+          <div class="card-icon photocopy"><i class="fas fa-copy"></i></div>
+          <h4>Photocopy</h4>
+          <p class="card-hindi">फोटोकॉपी / ज़ेरॉक्स</p>
+          <p class="card-desc">Black & White / Color Xerox<br/>श्वेत-श्याम / रंगीन फोटोकॉपी</p>
+          <button class="card-btn" onclick="openModal('photocopy')">Know More / जानें</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Service Category: Electronics & Accessories -->
+    <!-- <div class="services-category">
+      <h3 class="cat-title"><i class="fas fa-mobile-alt"></i> Electronics & Accessories / इलेक्ट्रॉनिक्स</h3>
+      <div class="services-grid">
+
+        <div class="service-card" data-name="Data Cable Charging Cable डेटा केबल">
+          <div class="card-icon cable"><i class="fas fa-plug"></i></div>
+          <h4>Data Cable</h4>
+          <p class="card-hindi">डेटा केबल</p>
+          <p class="card-desc">Type-C, Micro USB, Lightning<br/>सभी प्रकार की केबल उपलब्ध</p>
+          <button class="card-btn" onclick="openModal('cable')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Charger Mobile Charger चार्जर">
+          <div class="card-icon charger"><i class="fas fa-battery-full"></i></div>
+          <h4>Charger</h4>
+          <p class="card-hindi">चार्जर</p>
+          <p class="card-desc">Fast Charger & Adapters Available<br/>फास्ट चार्जर व एडाप्टर</p>
+          <button class="card-btn" onclick="openModal('charger')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="TV Remote AC Remote Dish Remote रिमोट">
+          <div class="card-icon remote"><i class="fas fa-tv"></i></div>
+          <h4>Dis Remote</h4>
+          <p class="card-hindi">डिश रिमोट / टीवी रिमोट</p>
+          <p class="card-desc">TV, AC & Dish Remote Available<br/>सभी प्रकार के रिमोट उपलब्ध</p>
+          <button class="card-btn" onclick="openModal('remote')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Neckband Earphone Bluetooth Wireless नेकबैंड">
+          <div class="card-icon neckband"><i class="fas fa-headphones"></i></div>
+          <h4>Neckband</h4>
+          <p class="card-hindi">नेकबैंड / ब्लूटूथ</p>
+          <p class="card-desc">Wireless & Bluetooth Neckband<br/>वायरलेस ब्लूटूथ नेकबैंड</p>
+          <button class="card-btn" onclick="openModal('neckband')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Earphone Wire Wired Earphone इयरफोन">
+          <div class="card-icon earphone"><i class="fas fa-headset"></i></div>
+          <h4>Earphone Wire</h4>
+          <p class="card-hindi">वायर इयरफोन</p>
+          <p class="card-desc">Wired Earphone & In-ear<br/>वायर्ड इयरफोन उपलब्ध</p>
+          <button class="card-btn" onclick="openModal('earphone')">Know More / जानें</button>
+        </div>
+
+        <div class="service-card" data-name="Wireless Earphone Bluetooth Earbuds वायरलेस">
+          <div class="card-icon wireless"><i class="fas fa-wifi"></i></div>
+          <h4>Wireless Earphone</h4>
+          <p class="card-hindi">वायरलेस इयरफोन</p>
+          <p class="card-desc">TWS & Bluetooth Earbuds<br/>वायरलेस ईयरबड्स उपलब्ध</p>
+          <button class="card-btn" onclick="openModal('wireless')">Know More / जानें</button>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about-section">
+    <div class="about-wrapper">
+      <div class="about-image-col">
+        <div class="about-img-box">
+          <div class="about-img-inner">
+            <i class="fas fa-landmark about-big-icon"></i>
+            <div class="about-badge-float">
+              <img src="https://i.ibb.co/Y4PNSqCh/prashant-Sgi.jpg" alt="prashant-Sgi" >
+             <!-- <img src="https://i.ibb.co/QjJXF6VC/1712987997820.jpg" alt="1712987997820" border="0"> -->
+              <!-- <i class="fas fa-check-circle"></i>
+              <span>Authorized Center<br/>अधिकृत केंद्र</span> -->
+            </div>
+          </div>
+          <div class="about-pattern"></div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag"><i class="fas fa-info-circle"></i> About Us</div>
+        <h2>हमारे बारे में <span>/ About Us</span></h2>
+        <p class="about-lead">
+          <strong>Jan Seva Kendra</strong> — आपके गांव का सबसे भरोसेमंद डिजिटल सेवा केंद्र।
+        </p>
+        <p>
+          हम पिछले कई वर्षों से आपके गांव और आसपास के क्षेत्र में सभी प्रकार की सरकारी और डिजिटल सेवाएं प्रदान कर रहे हैं। हमारा उद्देश्य है कि हर नागरिक को उनके घर के नजदीक ही सभी जरूरी सेवाएं मिलें।
+        </p>
+        <p>
+          We have been serving citizens of this area for many years, providing all government and digital services at your doorstep. Our mission is to make government services accessible to every citizen.
+        </p>
+        <div class="about-features">
+          <div class="feature-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Fast Service / तेज़ सेवा</strong>
+              <span>Same day processing available</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <strong>100% Genuine / 100% असली</strong>
+              <span>Authorized government portal</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-rupee-sign"></i>
+            <div>
+              <strong>Low Price / कम दाम</strong>
+              <span>Affordable charges for all services</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <div>
+              <strong>Help & Support / सहायता</strong>
+              <span>Guidance at every step</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATE SECTION ===== -->
+  <section id="certificate" class="certificate-section">
+    <div class="section-header light">
+      <div class="section-tag"><i class="fas fa-certificate"></i> Certificates</div>
+      <h2>हमारे प्रमाण पत्र <span>/ Our Certificates</span></h2>
+      <p>हम अधिकृत एवं पंजीकृत जन सेवा केंद्र हैं<br/>We are an authorized & registered Jan Seva Kendra</p>
+    </div>
+    <div class="certificate-grid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h4>CSC Authorized</h4>
+        <p>Common Service Centre<br/>कॉमन सर्विस सेंटर</p>
+        <span class="cert-badge">Verified ✓</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-medal"></i></div>
+        <h4>Government Registered</h4>
+        <p>Registered with UP Govt.<br/>उ.प्र. सरकार पंजीकृत</p>
+        <span class="cert-badge">Verified ✓</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-star"></i></div>
+        <h4>Trusted Service</h4>
+        <p>5000+ Happy Customers<br/>5000+ संतुष्ट ग्राहक</p>
+        <span class="cert-badge">Verified ✓</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-fingerprint"></i></div>
+        <h4>Aadhaar Operator</h4>
+        <p>UIDAI Authorized<br/>यूआईडीएआई अधिकृत</p>
+        <span class="cert-badge">Verified ✓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OWNER SECTION ===== -->
+  <section id="owner" class="owner-section">
+    <div class="owner-wrapper">
+      <div class="owner-img-col">
+        <div class="owner-avatar">
+          <img src="https://i.ibb.co/Y4PNSqCh/prashant-Sgi.jpg" alt="prashant-Sgi" >
+  
+          <!-- <i class="fas fa-user-tie"></i> -->
+          <div class="owner-ring"></div>
+        </div>
+      </div>
+      <div class="owner-content">
+        <div class="section-tag"><i class="fas fa-user-tie"></i> Shop Owner</div>
+        <h2>दुकानदार / Owner</h2>
+        <h3 class="owner-name">[ Prashant Kumar & Nishant Kumar ]</h3>
+        <p class="owner-role">Jan Seva Kendra Proprietor | जन सेवा केंद्र संचालक</p>
+       <p>
+          मेरा नाम <strong>प्रशांत कुमार</strong> है और मैं पिछले &nbsp;<b
+            ><span id="duration"></span> &nbsp;&nbsp;से ग्रामीण क्षेत्र में जन
+            सेवा कार्य कर रहे हैं।</b
+          >भगवानपुर गांव में <strong>जन सेवा केंद्र</strong> चला रहा हूँ। हमारे
+          केंद्र पर <strong>आधार कार्ड प्रिंट</strong>,
+          <strong>पैन कार्ड आवेदन</strong>,
+          <strong>जाति, निवास एवं आय प्रमाण पत्र</strong>,
+          <strong>राशन कार्ड</strong> सहित कई प्रकार की ऑनलाइन सेवाएं प्रदान की
+          जाती हैं। इसके साथ ही हम <strong>मोबाइल रिचार्ज</strong>,
+          <strong>पासपोर्ट फोटो</strong>, <strong>लेमिनेशन</strong> <strong>PVC CARD</strong> और 
+          <strong>डिजिटल दस्तावेज़ प्रिंटिंग</strong> जैसी सुविधाएं भी उपलब्ध
+          कराते हैं।
+        </p>
+        <p>
+          The proprietor of our center has been dedicated to serving the people of the village and surrounding areas for many years. Expertise in all government services with customer satisfaction as the top priority.
+        </p>
+        <div class="owner-contacts">
+          <a href="tel:+91XXXXXXXXXX" class="owner-contact-btn">
+            <i class="fas fa-phone-alt"></i> Call / कॉल करें
+          </a>
+          <a href="https://wa.me/91XXXXXXXXXX" class="owner-contact-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADDRESS / MAP SECTION ===== -->
+  <section id="address" class="address-section">
+    <div class="section-header">
+      <div class="section-tag"><i class="fas fa-map-marker-alt"></i> Address</div>
+      <h2>हमारा पता <span>/ Our Address</span></h2>
+    </div>
+    <div class="address-wrapper">
+      <div class="address-card">
+        <div class="address-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Shop Address / दुकान का पता</strong>
+            <span>[ भगवानपुर  ], Near [ रविदास मंदिर के पास  ],<br/>District: [ मेरठ ], UP - Pin [ 250222 ]</span>
+          </div>
+        </div>
+        <div class="address-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <strong>Phone / फोन</strong>
+            <span>8006242545 , 6398402847</span>
+          </div>
+        </div>
+        <div class="address-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>8006242545 , 6398402847</span>
+          </div>
+        </div>
+        <div class="address-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Timing / समय</strong>
+            <span>EverDay: 7:00 AM – 9:00 PM<br/>हर दिन : सुबह 7 बजे – शाम 9 बजे</span>
+          </div>
+        </div>
+        <div class="address-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span>prashant8006242545@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <i class="fas fa-map-marked-alt"></i>
+          <p>Google Map यहाँ दिखेगा<br/><small>Replace this with Google Maps embed</small></p>
+          <!-- Replace the div above with:
+          <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="100%" style="border:0;" allowfullscreen></iframe>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section">
+    <div class="section-header light">
+      <div class="section-tag"><i class="fas fa-headset"></i> Contact</div>
+      <h2>संपर्क करें <span>/ Contact Us</span></h2>
+      <p>किसी भी सेवा के लिए हमसे संपर्क करें<br/>Contact us for any service or query</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-form-box">
+        <h3><i class="fas fa-paper-plane"></i> Send Message / संदेश भेजें</h3>
+        <div class="form-group">
+          <label>Your Name / आपका नाम</label>
+          <input type="text" id="contactName" placeholder="Enter your name..." />
+        </div>
+        <div class="form-group">
+          <label>Phone / फोन नंबर</label>
+          <input type="tel" id="contactPhone" placeholder="+91 XXXXX XXXXX" />
+        </div>
+        <div class="form-group">
+          <label>Service Required / सेवा चुनें</label>
+          <select id="contactService">
+            <option value="">-- Select Service / सेवा चुनें --</option>
+            <option>Aadhar Card / आधार कार्ड</option>
+            <option>PAN Card / पैन कार्ड</option>
+            <option>Ration Card / राशन कार्ड</option>
+            <option>Ayushman Card / आयुष्मान कार्ड</option>
+            <option>e-Shram Card / ई-श्रम कार्ड</option>
+            <option>Voter Card / वोटर कार्ड</option>
+            <option>Jati Praman Patra / जाति प्रमाण पत्र</option>
+            <option>Niwas Praman Patra / निवास प्रमाण पत्र</option>
+            <option>UP Scholarship / यूपी छात्रवृत्ति</option>
+            <option>PVC Card </option>
+            <option>Mobile Charger</option>
+            <option>Data cable Type C Type B</option>
+            <option>OTG Type C Type B</option>
+            <option>Passport Photo</option>
+            <option>Photocopy</option>
+            <option>Other / अन्य</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message / संदेश</label>
+          <textarea id="contactMsg" placeholder="Your message... / आपका संदेश..." rows="3"></textarea>
+        </div>
+        <button class="btn-primary full-width" onclick="sendWhatsApp()">
+          <i class="fab fa-whatsapp"></i> Send on WhatsApp
+        </button>
+      </div>
+      <div class="contact-info-box">
+        <h3><i class="fas fa-phone-alt"></i> Quick Contact / तुरंत संपर्क</h3>
+        <a href="tel:+91XXXXXXXXXX" class="quick-contact-btn call">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <span>Call Now</span>
+            <strong>8006242545 , 6398402847</strong>
+          </div>
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="quick-contact-btn whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <span>WhatsApp</span>
+            <strong>8006242545</strong>
+          </div>
+        </a>
+        <div class="working-hours">
+          <h4><i class="fas fa-clock"></i> Working Hours / समय</h4>
+          <div class="hours-row"><span>EveryDay</span><span class="open">Open</span></div>
+          <div class="hours-row"><span>हर दिन </span><span>7 AM – 9 PM</span></div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-landmark"></i></div>
+          <div class="logo-text">
+            <span class="logo-main">Prashant Jan Seva Kendra</span>
+            <span class="logo-sub">प्रशान्त जन सेवा केंद्र</span>
+          </div>
+        </div>
+        <p>Aapke gaon ki digital seva — sabhi sarkari kaam ek hi jagah par.<br/>
+        <small>आपके गांव की डिजिटल सेवा — सभी सरकारी काम एक ही जगह।</small></p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home / होम</a>
+        <a href="#services">Services / सेवाएं</a>
+        <a href="#about">About / हमारे बारे में</a>
+        <a href="#certificate">Certificate / प्रमाण पत्र</a>
+        <a href="#contact">Contact / संपर्क</a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Top Services</h4>
+        <a href="#services">Aadhar Card / आधार</a>
+        <a href="#services">PAN Card / पैन</a>
+        <a href="#services">Ration Card / राशन</a>
+        <a href="#services">UP Scholarship</a>
+        <a href="#services">Ayushman Card</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Prashant Jan Seva Kendra Bhagwanpur |प्रशान्त  जन सेवा केंद्र भगवानपुर — All Rights Reserved</p>
+      <p>Made with <i class="fas fa-heart" style="color:#ef4444"></i> for our Vill भगवानपुर  | हमारे गांव के लिए</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button id="scrollTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" title="WhatsApp Us">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-label">Chat on WhatsApp</span>
+  </a>
+
+  <!-- ===== SERVICE MODAL ===== -->
+  <div id="serviceModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModalBtn()"><i class="fas fa-times"></i></button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalHindi"></p>
+      <ul id="modalList"></ul>
+      <div class="modal-footer-btns">
+        <a href="#contact" class="btn-primary" onclick="closeModalBtn()">
+          <i class="fas fa-phone-alt"></i> Contact Us / संपर्क करें
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="time.js"></script>
 </body>
 </html>

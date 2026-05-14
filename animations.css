@@ -1,0 +1,222 @@
+/* ============================================
+   JAN SEVA KENDRA - Animations Stylesheet
+   ============================================ */
+
+/* ===== KEYFRAMES ===== */
+@keyframes barFill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes pulseBig {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 0 0 16px rgba(212, 160, 23, 0); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Special float for cards that use translateY */
+.card2, .card4 {
+  animation-name: floatCardY !important;
+}
+@keyframes floatCardY {
+  0%, 100% { transform: translateY(-50%) translateX(0px); }
+  50% { transform: translateY(-50%) translateX(-6px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ===== SCROLL REVEAL CLASSES ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* ===== HERO ENTRANCE ANIMATION ===== */
+.hero-badge { animation: fadeInUp 0.6s ease both; }
+.hero-title { animation: fadeInUp 0.7s ease 0.1s both; }
+.hero-subtitle { animation: fadeInUp 0.7s ease 0.2s both; }
+.hero-cta { animation: fadeInUp 0.7s ease 0.3s both; }
+.hero-stats { animation: fadeInUp 0.7s ease 0.4s both; }
+.hero-image-col { animation: fadeInRight 0.8s ease 0.3s both; }
+
+/* ===== SERVICE CARD HOVER PULSE ===== */
+.service-card:hover .card-icon {
+  animation: pulseBig 0.6s ease;
+}
+
+/* ===== NAV ACTIVE INDICATOR ===== */
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+  width: 16px; height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ===== GOLD SHIMMER BUTTON ===== */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-primary:hover::before { left: 150%; }
+
+/* ===== CERT CARD GLOW ===== */
+.cert-card:hover .cert-icon {
+  box-shadow: 0 0 0 8px rgba(212, 160, 23, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ===== TICKER PAUSE ON HOVER ===== */
+.ticker-wrapper:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+/* ===== WHATSAPP FLOAT PULSE ===== */
+.whatsapp-float::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: -1;
+}
+@keyframes ping {
+  75%, 100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ===== HERO CARD GLOW ===== */
+.mockup-center-icon {
+  animation: pulseBig 3s ease-in-out infinite;
+}
+
+/* ===== SKELETON LOADER (optional) ===== */
+.skeleton {
+  background: linear-gradient(90deg, #e8edf5 25%, #f5f7fa 50%, #e8edf5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ===== SMOOTH SECTION TRANSITIONS ===== */
+section {
+  transition: background 0.3s ease;
+}
+
+/* ===== FOCUS STYLES (Accessibility) ===== */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===== MOBILE NAV TRANSITION ===== */
+.nav-links {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== SCROLL PROGRESS BAR ===== */
+#scrollProgress {
+  position: fixed; top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
